@@ -4,6 +4,7 @@
     --font-fammily: 'Inter', sans-serif;
     --background-color: #865DFF;
     --primary-color: #191825;
+    --bg-botao: #f6f6f6;
 }
 
 body {
@@ -47,7 +48,8 @@ h3 {
 .btn-jogar {
     padding: .5rem 1rem;
     border: none;
-    background-color: var(--primary-color);
+    background-color: var(--bg-botao);
+    color: var(--primary-color);
     border-radius: 5px;
     margin-top: 20px;
 }
