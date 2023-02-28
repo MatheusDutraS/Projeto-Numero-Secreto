@@ -2,8 +2,16 @@ function verificaValidezDoChute() {
     const numero = +chute   //Só de tentar somar transforma o elemento chute em um número
 
     if (chuteInvalido(numero)) {  
-        elementoChute.innerHTML += `<div>Valor inválido: Fale um número</div>`
-        return
+        if (chute.toUpperCase() === 'FIM DE JOGO') {
+            document.body.innerHTML = `
+            <h2>Fim DE JOGO</h2>
+            <h3>Precione o botão para jogar nonamente</h3>
+            <button id="jogar-novamente" class="btn-jogar">Jogar novamente</button>
+        `
+        } else {
+            elementoChute.innerHTML += `<div>Valor inválido: Fale um número</div>`
+            return
+        }
     }
 
     if (numeroForaDoIntervalo(numero)) {
