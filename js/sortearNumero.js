@@ -1,5 +1,5 @@
 const menorValor = 1;   //Definindo o menor valor
-const maiorValor = 100;   //Definindo o maior valor
+const maiorValor = 200;   //Definindo o maior valor
 const numeroSecreto = gerarNumeroAleatorio()   //Criação de uma constante na qual está é o resultado de uma função
 
 function gerarNumeroAleatorio() {   //Função que gera o número aleatório
