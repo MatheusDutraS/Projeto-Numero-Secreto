@@ -15,6 +15,7 @@ function verificaValidezDoChute() {
         document.body.innerHTML = `
             <h2>Você acertou</h2>
             <h3>O número secreto era ${numeroSecreto}</h3>
+            <button id="jogar-novamente" class="btn-jogar">Jogar novamente</button>
         `
     } else if (numeroSecreto > numero) {
         elementoChute.innerHTML += `<div>O número secreto é maior <i class="fa-solid fa-arrow-up-long"></i></div>`
@@ -27,7 +28,17 @@ function chuteInvalido(numero) {
     return Number.isNaN(numero)   //Se não é um número isNotANumber() 
 }
 //Para deixar o código mais claro transformar o Number/NaN em uma função
+//Retorna true quando o numero = NaN
 
 function numeroForaDoIntervalo(numero) {
     return numero > maiorValor || numero < menorValor
 }
+//retorna true quando houver um número maior ou menor que o intervalo
+
+document.body.addEventListener('click', e => {
+    if (e.target.id == 'jogar-novamente') {
+        window.location.reload()   //recarrega a página
+    }
+})
+//Função de evento click no body da página
+//Ao clicar na página em um elemento com id = 'jogar-novamente'
