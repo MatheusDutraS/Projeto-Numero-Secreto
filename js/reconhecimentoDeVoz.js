@@ -4,7 +4,7 @@ const elementoChute = document.getElementById('chute')   //Obtém o elemento chu
 
 const recognition = new SpeechRecognition();
 recognition.lang = 'pt-Br'   //Configuração do idioma para pt-br
-recognition.start()
+recognition.start()   //Começo do reconhecimento de voz
 
 recognition.addEventListener('result', onSpeak)   //Ao falar executa a função onSpeak
 
@@ -22,3 +22,5 @@ function exibeChute(chute) {   //Função que exibe o que foi dito na tela
     `
 }
 //Criação de uma div e span no HTML
+
+recognition.addEventListener('end', () => recognition.start())   //Quando o reconhecimento de voz terminar ele será inicializado novamente
