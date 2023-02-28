@@ -11,6 +11,7 @@ recognition.addEventListener('result', onSpeak)   //Ao falar executa a função 
 function onSpeak(e) {   //e significa evento
     chute = e.results[0][0].transcript   //Pega o que foi dito e insere no elemento chute
     exibeChute(chute)
+    verificaValidezDoChute(chute)
 }
 
 
